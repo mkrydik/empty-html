@@ -1,0 +1,345 @@
+/* Reset */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* General */
+html {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000;
+  font: 16px/1 Arial, sans-serif;
+  background: #467dee;
+}
+
+/* Title Bar */
+html::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% calc(-50% - 75px);
+  width: 300px;
+  height: 30px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: linear-gradient(180deg, #0997ff, #0053ee 8%, #0050ee 40%, #06f 88%, #06f 93%, #005bff 95%, #003dd7 96%,#003dd7);
+}
+
+/* Close Button */
+html::after {
+  display: inline-block;
+  content: "×";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: calc(-50% + 136px) calc(-50% - 74px);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  background: radial-gradient(farthest-corner at 4px 4px, #ec9e8c, #c03013);
+}
+
+/* Maximize Button : Position */
+head {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Maximize Button : Border */
+head::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: calc(-50% + 112px) calc(-50% - 74px);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  background: radial-gradient(farthest-corner at 4px 4px, #7fa0f4, #0c59e9);
+}
+
+/* Maximize Button : Inner Icon */
+head::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: calc(-50% + 112px) calc(-50% - 74px);
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff;
+  border-top-width: 2px;
+}
+
+/* Minimize Button : Position */
+meta[charset] {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Minimize Button : Border */
+meta[charset]::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: calc(-50% + 88px) calc(-50% - 74px);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  background: radial-gradient(farthest-corner at 4px 4px, #7fa0f4, #0c59e9);
+}
+
+/* Minimize Button : Inner Icon */
+meta[charset]::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: calc(-50% + 88px) calc(-50% - 74px);
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #fff;
+}
+
+/* Window Base */
+meta[name] {
+  z-index: -1;  /* Need */
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% calc(-50% - 20px);
+  width: 300px;
+  height: 140px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9, inset -2px -2px #001ea0, inset 2px 2px #166aee, inset -3px -3px #003bda, inset 3px 3px #0855dd;
+  background: #ece9d8;
+}
+
+/* Content Text */
+meta[name]::before {
+  display: inline-block;
+  content: "Author : @mkrydik\Ahttps://mkrydik.github.io";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: calc(-50% - 45px) calc(-50% - 5px);
+  line-height: 1.5;
+}
+
+/* OK Button */
+meta[name]::after {
+  display: inline-block;
+  content: "OK";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: calc(-50% + 20px) calc(-50% + 45px);
+  width: 75px;
+  height: 25px;
+  border: 1px solid #003c74;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 25px;
+  background: linear-gradient(180deg, #fff, #ecebe5 86%, #d8d0c4);
+  box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea, inset -2px 2px #bcd4f6, inset 1px -1px #89ade4, inset 2px -2px #89ade4;
+}
+
+/* Title Bar Text */
+title {
+  z-index: 1;  /* For Task Bar */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -140px -82px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+  cursor: default;
+  user-select: none;
+}
+
+/* Cancel Button */
+title::before {
+  display: inline-block;
+  content: "Cancel";
+  position: absolute;
+  top: 95px;
+  left: 205px;
+  width: 75px;
+  height: 25px;
+  border: 1px solid #003c74;
+  border-radius: 3px;
+  color: #000;
+  font-weight: normal;
+  text-align: center;
+  line-height: 25px;
+  background: linear-gradient(180deg, #fff, #ecebe5 86%, #d8d0c4);
+  box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #fdd889, inset -2px 2px #fbc761, inset 2px -2px #e5a01a;
+}
+
+/* Logo */
+title::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: calc(50% + 55px);
+  left: calc(-50% + 148px);
+  width: 25px;
+  height: 25px;
+  background-image: url("./logo.svg");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1px 1px 1px #222);
+}
+
+/* Base */
+link[rel="icon"] {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Task Bar */
+link[rel="icon"]::before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  background: linear-gradient(to bottom, #245edc, #3f8cf3 9%, #245edc 18%, #245edc 92%, #1941a5 100%) center/cover no-repeat;
+}
+
+/* Start Button */
+link[rel="icon"]::after {
+  display: block;
+  content: "スタート";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 135px;
+  height: 32px;
+  padding: 7.5px 0 0 35px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+  background: radial-gradient(circle, #5eac56, #3c873c) center/cover no-repeat;
+  box-shadow: 0 5px 10px #79ce71 inset, 4px 0 8px #3f8cf3;
+}
+
+/* Base */
+link[rel="stylesheet"] {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Task Tray Clock */
+link[rel="stylesheet"]::before {
+  display: inline-block;
+  content: "00:00 AM";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 32px;
+  border-left: 1px solid #092e51;
+  padding: 10px 20px 0 0;
+  color: #fff;
+  font-size: 13px;
+  text-align: right;
+  text-shadow: 1px 1px 2px #222;
+  background: linear-gradient(to bottom, #1290e9, #19b9f3 9%, #1290e9 18%, #1290e9 92%, #1941a5) center/cover no-repeat;
+  box-shadow: 0 5px 10px #14a5f0 inset, 0 5px 10px #333;
+}
+
+/* Show Hide Icon */
+link[rel="stylesheet"]::after {
+  display: inline-block;
+  content: ">";
+  position: absolute;
+  bottom: 4px;
+  right: 90px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #092e51;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 22px;
+  background: linear-gradient(to bottom, #1290e9, #19b9f3 9%, #1290e9 18%, #1290e9 92%, #1941a5) center/cover no-repeat;
+}
+
+/* Base */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Background Image */
+body::before {
+  z-index: -20;
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("./wallpaper.jpg");
+  background-size: cover;
+}
+
+/* Backdrop Blur */
+body::after {
+  z-index: -10;
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+}
